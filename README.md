@@ -22,7 +22,7 @@ Before running the notebook, ensure the following Python packages are installed:
 pip install pandas
 ```
 
-## Code Explanation
+## Code Breakdown
 
 ### Loading the Data
 The data is loaded into a pandas DataFrame from an external file. The structure of the DataFrame contains information such as:
