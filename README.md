@@ -1,7 +1,7 @@
 
 # Programming Assignment 4
 
-This programming assignment focuses on analyzing a dataset to extract information based on various filters. It involves manipulating a dataset using pandas DataFrame to perform operations like filtering, grouping, and retrieving specific records. It also involves visualize information from a data set the library of Seaborn.
+This programming assignment focuses on analyzing a dataset to extract information based on various filters. It involves manipulating a dataset using pandas DataFrame to perform operations like filtering, grouping, and retrieving specific records. It also involves visualizing information from a data set in the library of Seaborn.
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -24,6 +24,8 @@ pip install pandas
 
 ## Code Breakdown
 
+
+
 ### Loading the Data
 The data is loaded into a pandas DataFrame from an external file. The structure of the DataFrame contains information such as:
 - Name
@@ -39,6 +41,8 @@ import pandas as pd
 
 df_board = pd.read_csv('data.csv')  # Assuming the file is named data.csv
 ```
+
+## For Number One
 
 ### Filtering Data by Track and Hometown
 To extract board takers who belong to the "Instrumentation" track, are from "Luzon," and scored more than 70 in Electronics, the following filtering operation is used:
@@ -96,6 +100,28 @@ The data frame 'Mindy' will output a table as such:
 | 16  | S17  | Microelectronics| 79          | 79.00000 |
 | 19  | S20  | Communication   | 60          | 60.33333 |
 
+---
 
-## Conclusion
-The notebook showcases various techniques to analyze and visualize student datasets and data frames. It covers data filtering based on conditions, calculating averages, and using visualizations to compare data across different categories like tracks, genders, and hometowns.
+## For Number Two
+
+### Average Score by Track
+A boxplot is created using Seaborn to visualize the average score distribution by chosen track of the bar takers.
+
+``` python
+sb.boxplot(x='Track', y='Average', data=df_board, palette='Set3').set_title('Average Score by Track')
+sb.despine() 
+```
+
+### Average Score by Gender
+A violin plot is generated to compare the distribution of average scores between the genders of the bar takers.
+``` python
+sb.violinplot(x='Gender', y='Average', data=df_board, palette='Set2').set_title('Average Score by Gender')
+sb.despine() 
+```
+
+### Average Score by Hometown
+A bar plot is created to show the average score across different hometowns of the bar takers.
+``` python
+sb.barplot(x='Hometown', y='Average', data=df_board, palette='Set1').set_title('Average Score by Hometown')
+sb.despine()
+```
