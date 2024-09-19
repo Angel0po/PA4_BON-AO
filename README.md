@@ -119,7 +119,7 @@ sb.despine()
 This assignment demonstrates the use of pandas for data manipulation and Seaborn for data visualization. The code successfully filters and presents the required information from the dataset, focusing on specific groups and their performance.
 
 ## Author
-This assignment was completed by [Angelo Bon-ao].
+Angelo Bon-ao
 
 ## Program and Python Version
 - Program: Jupyter Notebook
