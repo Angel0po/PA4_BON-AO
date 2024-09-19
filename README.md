@@ -11,7 +11,7 @@ This programming assignment focuses on analyzing a dataset to extract informatio
    - [Filtering Data by Track and Hometown](#filtering-data-by-track-and-hometown)
    - [Selecting Specific Columns](#selecting-specific-columns)
    - [Calculating Averages](#calculating-averages)
-   - [Filtering Female Students from Mindanao with Average >= 55](#filtering-female-students-from-mindanao-with-average--55)
+   - [Mindy Data Frame](#filtering-female-students-from-mindanao-with-average--55)
    - [Visualizing Data](#visualizing-data)
      - [Average Score by Track](#average-score-by-track)
      - [Average Score by Gender](#average-score-by-gender)
@@ -119,7 +119,7 @@ sb.despine()
 This assignment demonstrates the use of pandas for data manipulation and Seaborn for data visualization. The code successfully filters and presents the required information from the dataset, focusing on specific groups and their performance.
 
 ## Author
-This assignment was completed by [Your Name].
+This assignment was completed by [Angelo Bon-ao].
 
 ## Program and Python Version
 - Program: Jupyter Notebook
