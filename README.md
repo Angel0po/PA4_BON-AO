@@ -58,7 +58,7 @@ After filtering the DataFrame, we select only the "Name," "GEAS," and "Electroni
 Instru
 ```
 
-This will output a table like:
+This will output a table such as this:
 
 | Name  | GEAS | Electronics |
 |-------|------|-------------|
@@ -66,6 +66,35 @@ This will output a table like:
 | S8    | 64   | 81          |
 | S30   | 57   | 81          |
 
+### Calculating Average Scores
+A new column, Average, is added to the DataFrame, which calculates the average of students' grades in Math, GEAS, and Electronics. The mean function is used across these columns. It will later be used to create the data frame 'Mindy.'
+
+``` python
+df_board['Average'] = df_board[['Math', 'GEAS', 'Electronics']].mean(axis=1)  # Calculate average across subjects
+df_board
+```
+
+### Filtering Female Students from Mindanao with Average >= 55
+This section filters female students from Mindanao with an average score of 55 or more. The filtered results include their name, track, electronics grade, and average score.
+
+```python
+Mindy = df_board[
+    (df_board['Hometown'] == 'Mindanao') &  # Hometown is Mindanao
+    (df_board['Gender'] == 'Female') &      # Gender is Female
+    (df_board['Average'] >= 55)             # Average score is 55 or more
+][['Name', 'Track', 'Electronics', 'Average']]  # Select specific columns
+
+Mindy
+```
+
+The data frame 'Mindy' will output a table as such:
+
+|     | Name | Track           | Electronics | Average  |
+|-----|------|-----------------|-------------|----------|
+| 1   | S2   | Communication   | 75          | 72.33333 |
+| 2   | S3   | Instrumentation | 74          | 78.00000 |
+| 16  | S17  | Microelectronics| 79          | 79.00000 |
+| 19  | S20  | Communication   | 60          | 60.33333 |
 
 
 ## Conclusion
