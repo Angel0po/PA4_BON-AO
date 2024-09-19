@@ -10,7 +10,7 @@ This programming assignment focuses on analyzing a dataset to extract informatio
    - [Loading the Data](#loading-the-data)
    - [Filtering Data by Track and Hometown](#filtering-data-by-track-and-hometown)
    - [Selecting Specific Columns](#selecting-specific-columns)
-4. [Conclusion](#conclusion)
+
 
 ## Introduction
 This notebook handles student records, focusing on filtering and analyzing their performance in subjects like Math, Electronics, GEAS, and Communication. The main tasks involve extracting data based on specific criteria such as "Track" and "Hometown."
